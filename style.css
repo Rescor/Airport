@@ -1,0 +1,27 @@
+
+
+body {
+    color: yellow;
+    background-color: black;
+}
+
+thead {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+tbody {
+    font-size: 2rem;
+}
+
+td {
+    padding: 0 20px;
+}
+
+th {
+    padding: 10px 0;
+}
+
+.gates {
+    display: none;
+}
