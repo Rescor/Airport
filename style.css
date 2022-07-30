@@ -1,5 +1,3 @@
-
-
 body {
     color: yellow;
     background-color: black;
@@ -22,6 +20,6 @@ th {
     padding: 10px 0;
 }
 
-.gates {
+#gate {
     display: none;
 }
