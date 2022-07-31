@@ -13,37 +13,37 @@
     
 </head>
 <body>
-
     <div class="header">
         <div class="container">
             <div>
                 <img src="logo.png" alt="" class="logo">
             </div>
-            <div class="container2 flex2">
+
+            <div class="headerInfo">
                 <div class="containerColumn">
                     <div class="containerRow">
                         <div id="type">Arrivals</div>
                     </div>
-                    <div id="switch">Switch to departures</div>
+                    <div class="containerRow">
+                        <div id="switch" class="unselectable"></div>
+                    </div>
                 </div>
             </div>
-            <div class="time">Time</div>
+
+            <div id="currentTime"></div>
         </div>
     </div>
 
-    <button id="arrivalsBtn">Arrivals</button>
-    <button id="departuresBtn">Departures</button>
-
     <table>
-       <thead>
+       <thead class="unselectable">
         <tr id="theadTr">
-            <th id="flightNumber"   data-sort="">Flight Number</th>
-            <th id="airline"        data-sort="">Airline</th>
-            <th id="from"           data-sort="">From</th>
-            <th id="time"           data-sort="down">Time</th>
-            <th id="status"         data-sort="">Status</th>
-            <th id="terminal"       data-sort="">Terminal</th>
-            <th id="gate"           data-sort="up">Gate</th>
+            <th id="flightNumber"   data-sort=""><span>Fl. Number</span></th>
+            <th id="airline"        data-sort=""><span>Airline</span></th>
+            <th id="direction"      data-sort=""><span id="directionText"></span></th>
+            <th id="time"           data-sort="down"><span>Time</span></th>
+            <th id="status"         data-sort=""><span>Status</span></th>
+            <th id="terminal"       data-sort=""><span>Term.</span></th>
+            <th id="gate"           data-sort="down"><span>Gate</span></th>
         </tr>
        </thead>
        <tbody id="data">
