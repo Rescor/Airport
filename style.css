@@ -5,7 +5,9 @@ body {
     margin: 0;
     padding: 0;
 }
-
+#desktop {
+    display: none;
+}
 .container {
     display: flex;
     width: 100%;
@@ -23,13 +25,19 @@ body {
 .header {
     font-size: 3vw;
     background-color: rgb(21, 21, 21);
-    padding-top: 1%;
     padding-left: 1%;
 }
 
 .headerInfo {
     flex: 1;
-    margin-top: -1.5vw;
+}
+
+.logo {
+    flex: 1;
+    width: 10vw;
+    max-width: 130px;
+    margin-right: 2vw;
+    margin-top: 1vw;
 }
 
 #currentTime {
@@ -47,12 +55,7 @@ body {
     cursor:pointer;
     margin-bottom: 1vw;
 }
-.logo {
-    flex: 1;
-    width: 10vw;
-    max-width: 130px;
-    margin-right: 2vw;
-}
+
 #type {
     font-size: 5.5vw;
 }
@@ -77,10 +80,8 @@ th span {
     
 }
 
-
 tbody {
     font-size: 2.1vw;
-    
 }
 
 td {
@@ -89,7 +90,7 @@ td {
 }
 
 tbody tr:nth-child(2n+1) {
-    background-color: rgb(20, 46, 40);
+    background-color: rgba(20, 46, 40);
 }
 tbody tr:nth-child(2n) {
     background-color: rgb(27, 49, 71);
@@ -106,7 +107,58 @@ tbody tr:nth-child(2n) {
     -moz-user-select: none;
     -ms-user-select: none;
 }
+#desktop {
+    display: inline-table;
+}
+.mobile {
+    display: none;
+}
+#mSwitch {
+    display: none;
+}
 
 @media all and (orientation: portrait){
+    #desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+    .logo {
+    width: 9vw;
+    max-width: 110px;
+    }
+    thead {
+        font-size: 2.4vw;
+    }
+    tbody {
+        font-size: 3.4vw;
+    }
+    #type {
+        font-size: 8vw;
+    }
+    #switch {
+        font-size: 5vw;
+        display: none;
+    }
+    #mSwitch {
+        display: inline;
+        white-space: nowrap;
+        text-align: center;
+        width: 70%;
+        position: fixed;
+        bottom: 3%;  
+        left: 50%; 
+        transform: translate(-50%, -3%);
+        background-color: rgb(79, 92, 107);
+        color: rgb(96, 176, 255);
+        font-size: 9vw;
+        padding: 1vw 5vw;
+        border: 3px solid black;
+        border-radius: 10vw;
+    }
+    #currentTime {
+        font-size: 8vw;
+    }
 
 }
