@@ -110,7 +110,7 @@ tbody tr:nth-child(2n) {
 #desktop {
     display: inline-table;
 }
-.mobile {
+#mobile {
     display: none;
 }
 #mSwitch {
@@ -121,8 +121,8 @@ tbody tr:nth-child(2n) {
     #desktop {
         display: none;
     }
-    .mobile {
-        display: block;
+    #mobile {
+        display: inline-table;
     }
     .logo {
     width: 9vw;
