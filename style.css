@@ -5,9 +5,17 @@ body {
     margin: 0;
     padding: 0;
 }
-#desktop {
-    display: none;
+
+.header {
+    font-size: 3vw;
+    background-color: rgb(21, 21, 21);
+    padding-left: 1%;
 }
+
+.headerInfo {
+    flex: 1;
+}
+
 .container {
     display: flex;
     width: 100%;
@@ -22,14 +30,41 @@ body {
     flex-direction: column;
 }
 
-.header {
-    font-size: 3vw;
-    background-color: rgb(21, 21, 21);
-    padding-left: 1%;
+table {
+    width: 100%;
+    border-spacing: 0px;
 }
 
-.headerInfo {
-    flex: 1;
+thead {
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+th {
+    padding: 5px;
+    cursor: pointer;
+    
+}
+
+th span {
+    border-bottom: 1px solid #a88600;
+}
+
+tbody {
+    font-size: 2.1vw;
+}
+
+tbody tr:nth-child(2n+1) {
+    background-color: rgba(20, 46, 40);
+}
+tbody tr:nth-child(2n) {
+    background-color: rgb(27, 49, 71);
+}
+
+td {
+    border: none;
+    padding: 5px;
 }
 
 .logo {
@@ -60,46 +95,6 @@ body {
     font-size: 5.5vw;
 }
 
-table {
-    width: 100%;
-    border-spacing: 0px;
-}
-
-thead {
-    font-size: 1.5vw;
-    text-transform: uppercase;
-    text-align: left;
-}
-th {
-    padding: 5px 5px;
-    cursor:pointer;
-    
-}
-th span {
-    border-bottom: 1px solid #a88600;
-    
-}
-
-tbody {
-    font-size: 2.1vw;
-}
-
-td {
-    border: none;
-    padding: 5px;
-}
-
-tbody tr:nth-child(2n+1) {
-    background-color: rgba(20, 46, 40);
-}
-tbody tr:nth-child(2n) {
-    background-color: rgb(27, 49, 71);
-}
-
-#gate {
-    display: none;
-}
-
 .unselectable {
     user-select: none;
     -webkit-touch-callout: none;
@@ -107,58 +102,68 @@ tbody tr:nth-child(2n) {
     -moz-user-select: none;
     -ms-user-select: none;
 }
-#desktop {
-    display: inline-table;
-}
+
 #mobile {
     display: none;
 }
+
+#gate {
+    display: none;
+}
+
 #mSwitch {
     display: none;
 }
 
-@media all and (orientation: portrait){
+
+@media all and (orientation: portrait) {
     #desktop {
         display: none;
     }
+
     #mobile {
         display: inline-table;
     }
-    .logo {
-    width: 9vw;
-    max-width: 110px;
-    }
+
     thead {
         font-size: 2.4vw;
     }
+
     tbody {
         font-size: 3.4vw;
     }
+
+    .logo {
+        width: 9vw;
+        max-width: 110px;
+    }
+
     #type {
         font-size: 8vw;
     }
+
     #switch {
-        font-size: 5vw;
         display: none;
     }
+
     #mSwitch {
         display: inline;
-        white-space: nowrap;
-        text-align: center;
-        width: 70%;
-        position: fixed;
-        bottom: 3%;  
-        left: 50%; 
-        transform: translate(-50%, -3%);
         background-color: rgb(79, 92, 107);
         color: rgb(96, 176, 255);
-        font-size: 9vw;
-        padding: 1vw 5vw;
         border: 3px solid black;
         border-radius: 10vw;
+        font-size: 9vw;
+        padding: 1vw 5vw;
+        text-align: center;
+        white-space: nowrap;
+        position: fixed;
+        width: 70%;
+        left: 50%;
+        bottom: 3%;
+        transform: translate(-50%);        
     }
+
     #currentTime {
         font-size: 8vw;
     }
-
 }
