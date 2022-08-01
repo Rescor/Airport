@@ -32,7 +32,7 @@ const mTimeElem          = document.getElementById("mTime");
 const mSwitchElem        = document.getElementById("mSwitch");
 
 let tab                  = "arrivals";
-let currentTime          = new Date().toLocaleTimeString();
+let currentTime          = getLocalTime();
 
 currentTimeElem.innerText = currentTime;
 
@@ -149,9 +149,7 @@ function showDepartures() {
 }
 
 function getFormattedTime(date) {
-    const time              = new Date(date).toLocaleTimeString();
-    const editedTimeStr     = time.slice(0, -3);
-    return editedTimeStr;
+    return date.substring(11, 16);
 }
 
 function reloadDataset(flightData) {
@@ -160,9 +158,15 @@ function reloadDataset(flightData) {
     flightData.departures   = reloadedData.departures;
 }
 
+function getLocalTime() {
+    const timeZoneOffsetMs  = new Date().getTimezoneOffset() * 60000;
+    const offsetDate        = (new Date(new Date().getTime() - timeZoneOffsetMs));
+    const localTime         = offsetDate.toISOString().substring(11,19);
+    return localTime;
+}
+
 setInterval(() => {
-    currentTime               = new Date().toLocaleTimeString();
-    currentTimeElem.innerText = currentTime;
+    currentTimeElem.innerText = getLocalTime();
 }, 1000);
 
 showArrivals();
