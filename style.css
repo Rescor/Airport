@@ -44,7 +44,6 @@ thead {
 th {
     padding: 5px;
     cursor: pointer;
-    
 }
 
 th span {
@@ -58,6 +57,7 @@ tbody {
 tbody tr:nth-child(2n+1) {
     background-color: rgba(20, 46, 40);
 }
+
 tbody tr:nth-child(2n) {
     background-color: rgb(27, 49, 71);
 }
