@@ -106,13 +106,13 @@ function showArrivals() {
                                 <td>${flightsData.arrivals[i].fnr}</td>
                                 <td>${flightsData.arrivals[i].alname}</td>
                                 <td>${flightsData.arrivals[i].apname}</td>
-                                <td>${flightsData.arrivals[i].status}</td>
+                                <td class="status">${flightsData.arrivals[i].status}</td>
                                 <td>${flightsData.arrivals[i].terminal}</td></tr>`;
 
         mDataElem.innerHTML += `<tr><td>${time}</td>
                                 <td>${flightsData.arrivals[i].fnr}<br>${flightsData.arrivals[i].alname}</td>
                                 <td>${(flightsData.arrivals[i].apname).replace("/", "/ ")}</td>
-                                <td>${flightsData.arrivals[i].status}</td>
+                                <td class="status">${flightsData.arrivals[i].status}</td>
                                 <td>${flightsData.arrivals[i].terminal}</td></tr>`;
     }
 }
@@ -135,14 +135,14 @@ function showDepartures() {
                                 <td>${flightsData.departures[i].fnr}</td>
                                 <td>${flightsData.departures[i].alname}</td>
                                 <td>${flightsData.departures[i].apname}</td>
-                                <td>${flightsData.departures[i].status}</td>
+                                <td class="status">${flightsData.departures[i].status}</td>
                                 <td>${flightsData.departures[i].terminal}</td>
                                 <td>${flightsData.departures[i].gate}</td></tr>`;
 
         mDataElem.innerHTML += `<tr><td>${time}</td>
                                 <td>${flightsData.departures[i].fnr}<br>${flightsData.departures[i].alname}</td>
                                 <td>${(flightsData.departures[i].apname).replace("/", "/ ")}</td>
-                                <td>${flightsData.departures[i].status}</td>
+                                <td class="status">${flightsData.departures[i].status}</td>
                                 <td>${flightsData.departures[i].terminal}</td>
                                 <td>${flightsData.departures[i].gate}</td></tr>`;
     }
